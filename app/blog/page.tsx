@@ -11,7 +11,8 @@ export default function BlogPosts() {
 
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-medium">Our Blog</h1>
+      <h1 className="mb-8 text-2xl font-medium">My blog</h1>
+      <p>There is nothing yet, come back later !</p>
       <div>
         {allBlogs
           .sort((a, b) => {
