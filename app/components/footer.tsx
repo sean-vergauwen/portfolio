@@ -18,7 +18,7 @@ const YEAR = new Date().getFullYear();
 function SocialLink({ href, icon: Icon }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
-      <Icon />
+      <Icon className="transition delay-50 duration-300 hover:fill-[#EFB631]" />
     </a>
   );
 }
@@ -42,7 +42,7 @@ export default function Footer() {
       <time>© {YEAR}</time>{" "}
       <a
         className="no-underline"
-        href={socialLinks.twitter}
+        href={socialLinks.email}
         target="_blank"
         rel="noopener noreferrer"
       >

@@ -13,7 +13,7 @@ export function Navbar() {
     <nav className="lg:mb-16 mb-12 py-5">
       <div className="flex flex-col md:flex-row md:items-center justify-between">
         <div className="flex items-center">
-          <Link href="/" className="text-3xl font-semibold">
+          <Link href="/" className="text-3xl font-semibold transition delay-50 duration-300 hover:text-[#EFB631]">
             {metaData.title}
           </Link>
         </div>
@@ -22,7 +22,7 @@ export function Navbar() {
             <Link
               key={path}
               href={path}
-              className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative"
+              className="transition delay-50 duration-300 flex align-middle relative hover:text-[#EFB631]"
             >
               {name}
             </Link>

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 function SocialLink({ href, icon: Icon, name}) {
   return (
-      <div className="flex sm:items-center sm:flex-row text-lg gap-3.5"> <Icon /> <a href={href} target="_blank">{name}</a></div>
+      <div className="flex items-center flex-row text-lg gap-3.5"> <Icon /> <a href={href} target="_blank">{name}</a></div>
   );
 }
 
