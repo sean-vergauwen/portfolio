@@ -38,7 +38,7 @@ function SocialLinks() {
 
 export default function Footer() {
   return (
-    <small className="flex flex-col gap-2 md:flex-row lg:mt-24 mt-16 text-[#1C1C1C] dark:text-[#D4D4D4]">
+    <small className="flex flex-col gap-2 md:flex-row lg:mt-24 mt-16 mb-10 text-[#1C1C1C] dark:text-[#D4D4D4]">
       <a
         className="no-underline transition delay-50 duration-300 hover:opacity-90 hover:text-[#EFB631]"
         href={socialLinks.email}
