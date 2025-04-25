@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { socialLinks } from "./config";
 
 export default function Page() {
   return (
@@ -7,13 +6,13 @@ export default function Page() {
         <Image
           src="/profile.png"
           alt="Profile photo"
-          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0 transition delay-50 duration-300"
+          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0 hover:shadow-[#EFB631] hover:scale-105 transition delay-50 duration-300 shadow-gray-400 shadow-lg"
           unoptimized
           width={160}
           height={160}
           priority
         />
-      <h1 className="mb-8 text-2xl font-medium">
+      <h1 className="mb-8 text-2xl font-medium bold">
           Welcome !
       </h1>
       <div className="prose prose-neutral dark:prose-invert">
