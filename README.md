@@ -1,5 +1,7 @@
 # My Portfolio
 
+![Screenshot 2025-05-12 at 09-07-30 Sean Vergauwen](https://github.com/user-attachments/assets/ef635315-d4b1-472e-92b4-9f5a8822a777)
+
 ## Technologies Used
 
 - Framework: [Next.js](https://nextjs.org/)
