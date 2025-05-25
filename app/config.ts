@@ -13,5 +13,5 @@ export const socialLinks = {
   leetcode: "https://leetcode.com/u/sean-vergauwen",
   instagram: "https://www.instagram.com/sean.vergauwen",
   linkedin: "https://www.linkedin.com/in/sean-vergauwen",
-  email: "mailto:seanvr93@gmail.com",
+  email: "mailto:sean.vr93@gmail.com",
 };
