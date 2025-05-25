@@ -7,6 +7,24 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Woodytoys",
+    year: 2025,
+    description: "Sysadmin and devops project",
+    url: "https://github.com/sean-vergauwen/admin2",
+  },
+  {
+    title: "LEGO_Car",
+    year: 2025,
+    description: "Lego car controlled by a Raspberry pi Pico W",
+    url: "https://github.com/sean-vergauwen/elec-digi-webapp",
+  },
+  {
+    title: "Portfolio",
+    year: 2025,
+    description: "The portfolio you are looking at",
+    url: "https://github.com/sean-vergauwen/portfolio",
+  },
+  {
     title: "TattooApp",
     year: 2024,
     description: "Platform to find a Tattoo artist nearby",
@@ -27,7 +45,7 @@ export const projects: Project[] = [
   {
     title: "console_js",
     year: 2024,
-    description: "Linux terminal recreation",
+    description: "Linux terminal simulator",
     url: "https://github.com/sean-vergauwen/console_js",
   },
   {
