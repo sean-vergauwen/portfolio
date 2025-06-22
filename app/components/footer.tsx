@@ -3,9 +3,7 @@
 import React from "react";
 
 import {
-  FaXTwitter,
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa6";
 
@@ -29,9 +27,7 @@ function SocialLinks() {
       <SocialLink href={socialLinks.email} icon={TbMailFilled} />
       <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
       <SocialLink href={socialLinks.github} icon={FaGithub} />
-      <SocialLink href={socialLinks.twitter} icon={FaXTwitter} />
       <SocialLink href={socialLinks.leetcode} icon={SiLeetcode} />
-      <SocialLink href={socialLinks.instagram} icon={FaInstagram} />
     </div>
   );
 }
