@@ -30,7 +30,7 @@ importers:
         specifier: ^0.16.20
         version: 0.16.20
       next:
-        specifier: 15.1.16
+        specifier: ^15.1.16
         version: 15.1.16(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       next-mdx-remote:
         specifier: ^6.0.0
