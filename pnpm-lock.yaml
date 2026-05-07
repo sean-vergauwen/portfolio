@@ -30,11 +30,11 @@ importers:
         specifier: ^0.16.20
         version: 0.16.20
       next:
-        specifier: 15.1.11
-        version: 15.1.11(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 15.1.16
+        version: 15.1.16(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       next-mdx-remote:
-        specifier: ^5.0.0
-        version: 5.0.0(@types/react@19.0.7)(acorn@8.14.0)(react@19.0.0)
+        specifier: ^6.0.0
+        version: 6.0.0(@types/react@19.0.7)(acorn@8.14.0)(react@19.0.0)
       next-themes:
         specifier: ^0.4.4
         version: 0.4.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
