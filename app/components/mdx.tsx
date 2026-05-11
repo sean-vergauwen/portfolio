@@ -1,14 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { evaluate } from "@mdx-js/mdx";
+import * as jsxRuntime from "react/jsx-runtime";
+import * as jsxDevRuntime from "react/jsx-dev-runtime";
 import { highlight } from "sugar-high";
 import { TweetComponent } from "./tweet";
 import { CaptionComponent } from "./caption";
 import { YouTubeComponent } from "./youtube";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
-import "katex/dist/katex.min.css";
+import remarkGfm from "remark-gfm";
 
 function CustomLink(props) {
   let href = props.href;
@@ -80,19 +82,14 @@ function slugify(str) {
 }
 
 function createHeading(level) {
+  const Tag = `h${level}` as keyof React.JSX.IntrinsicElements;
   const Heading = ({ children }) => {
-    let slug = slugify(children);
-    return React.createElement(
-      `h${level}`,
-      { id: slug },
-      [
-        React.createElement("a", {
-          href: `#${slug}`,
-          key: `link-${slug}`,
-          className: "anchor",
-        }),
-      ],
-      children
+    const slug = slugify(children);
+    return (
+      <Tag id={slug}>
+        <a href={`#${slug}`} key={`link-${slug}`} className="anchor" />
+        {children}
+      </Tag>
     );
   };
   Heading.displayName = `Heading${level}`;
@@ -117,17 +114,20 @@ let components = {
   Callout,
 };
 
-export function CustomMDX(props) {
+export async function CustomMDX(props) {
+  const { default: MDXContent } = await evaluate(props.source, {
+    Fragment: jsxRuntime.Fragment,
+    jsx: jsxRuntime.jsx,
+    jsxs: jsxRuntime.jsxs,
+    jsxDEV: jsxDevRuntime.jsxDEV,
+    development: process.env.NODE_ENV === "development",
+    remarkPlugins: [remarkMath, remarkGfm],
+    rehypePlugins: [rehypeKatex],
+  } as any);
+
   return (
-    <MDXRemote
-      {...props}
+    <MDXContent
       components={{ ...components, ...(props.components || {}) }}
-      options={{
-        mdxOptions: {
-          remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
-        },
-      }}
     />
   );
 }

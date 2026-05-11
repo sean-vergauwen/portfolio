@@ -4,13 +4,13 @@ import { projects } from "./project-data";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "My projects",
+  description: "Projects I worked on",
 };
 
 export default function Projects() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-medium">Projects</h1>
+      <h1 className="mb-8 text-2xl font-medium">Projects I worked on</h1>
       <div>
         {projects.map((project, index) => (
           <Link
